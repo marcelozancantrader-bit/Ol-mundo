@@ -1,21 +1,18 @@
 # Olá Mundo
 
-Aplicativo iOS simples em SwiftUI: ao digitar `olá` no campo de texto, a tela exibe **olá mundo**.
+App que responde **olá mundo** quando você digita `olá`. Duas versões neste
+repositório:
 
-## Como executar
+- **`OlaMundo/`** — versão original em **SwiftUI** (apenas iOS).
+  Veja [`INSTALL.md`](INSTALL.md) para instalar em um iPhone real.
+- **`flutter_app/`** — versão em **Flutter** (iOS + Android no mesmo código).
+  Base recomendada para evoluir até um app vendável nas duas lojas.
+  Veja [`flutter_app/README.md`](flutter_app/README.md).
 
-1. Abra `OlaMundo/OlaMundo.xcodeproj` no Xcode 15 ou superior.
-2. Selecione um simulador de iPhone (iOS 17+).
-3. Pressione `Cmd + R` para compilar e rodar.
+## Qual versão usar?
 
-## Estrutura
-
-- `OlaMundo/OlaMundoApp.swift` — ponto de entrada do app (SwiftUI `@main`).
-- `OlaMundo/ContentView.swift` — tela principal com `TextField` e resposta dinâmica.
-
-## Como funciona
-
-O `TextField` está vinculado a um `@State` chamado `texto`. A cada alteração, o
-texto é normalizado (sem acentos, minúsculas, sem espaços nas pontas) e
-comparado com `"ola"`. Se for igual, a tela exibe **olá mundo**; caso contrário,
-o rótulo de resposta fica vazio.
+| Cenário | Versão |
+|---|---|
+| Quero estudar SwiftUI / só preciso de iOS | `OlaMundo/` |
+| Quero publicar nas duas lojas (App Store + Play Store) | `flutter_app/` |
+| Quero o build script para gerar `.ipa` no Mac | `scripts/build-ipa.sh` |
